@@ -1,0 +1,12 @@
+.statistic {
+	&__holder {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__line {
+		display: flex;
+		gap: 4px;
+	}
+}

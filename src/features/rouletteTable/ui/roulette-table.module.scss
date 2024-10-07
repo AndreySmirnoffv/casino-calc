@@ -1,0 +1,30 @@
+.analiz {
+	width: 100%;
+	border-collapse: collapse;
+
+	td {
+		text-align: center;
+		padding: 10px;
+		border: 1px solid #ddd;
+	}
+
+	.green {
+		background-color: green;
+		color: white;
+	}
+
+	.red {
+		background-color: red;
+		color: white;
+	}
+
+	.black {
+		background-color: black;
+		color: white;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}

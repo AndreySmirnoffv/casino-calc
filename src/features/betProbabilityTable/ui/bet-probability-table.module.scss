@@ -1,0 +1,13 @@
+.analiz {
+	width: 100%;
+	border-collapse: collapse;
+
+	td {
+		padding: 10px;
+		border: 1px solid #ddd;
+	}
+
+	thead td {
+		font-weight: bold;
+	}
+}
