@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export interface IButton {
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode;
 }

@@ -19,8 +19,13 @@ export const ChangeNumber = ({
 			</div>
 			<RouletteTable setSelectedNumbers={setSelectedNumbers} />
 			<div>
-				<Button>Сброс</Button>
-				<Button>Отмена</Button>
+				<Button onClick={() => setSelectedNumbers([])}>Сброс</Button>
+				<Button
+					onClick={() =>
+						setSelectedNumbers(prevState => prevState.slice(0, -1))
+					}>
+					Отмена
+				</Button>
 			</div>
 		</div>
 	);

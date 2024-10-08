@@ -60,8 +60,14 @@ export const Home = () => {
 				selectedNumbers={selectedNumbers}
 				setSelectedNumbers={setSelectedNumbers}
 			/>
-			<RouletteStatistics statisticsSpins={statisticsSpins} />
-			<RecommendedRates />
+			{selectedNumbers.length >= 1 && (
+				<>
+					<RouletteStatistics statisticsSpins={statisticsSpins} />
+					{selectedNumbers.length >= 4 && (
+						<RecommendedRates selectedNumbers={selectedNumbers} />
+					)}
+				</>
+			)}
 		</div>
 	);
 };

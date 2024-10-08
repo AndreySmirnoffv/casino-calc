@@ -1,5 +1,9 @@
 import { IButton } from "@shared/ui/button/model/types.ts";
 
-export const Button = ({ children }: IButton) => {
-	return <button type={"button"}>{children}</button>;
+export const Button = ({ children, ...props }: IButton) => {
+	return (
+		<button type={"button"} {...props}>
+			{children}
+		</button>
+	);
 };
