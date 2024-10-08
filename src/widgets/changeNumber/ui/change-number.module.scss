@@ -1,6 +1,7 @@
 .numbers {
 	&__selected {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 1px;
 	}
 

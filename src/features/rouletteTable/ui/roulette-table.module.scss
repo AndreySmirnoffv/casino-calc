@@ -15,21 +15,6 @@
 		border: 2px solid #004;
 	}
 
-	.green {
-		background-color: green;
-		color: white;
-	}
-
-	.red {
-		background-color: red;
-		color: white;
-	}
-
-	.black {
-		background-color: black;
-		color: white;
-	}
-
 	button {
 		display: block;
 		width: 100%;
@@ -41,5 +26,39 @@
 		&:hover {
       background-color: #ffb;
     }
+	}
+
+	.green {
+		background-color: green;
+	}
+
+	.red {
+		background-color: red;
+	}
+
+	.black {
+		background-color: black;
+	}
+
+	@media (width <= 768px) {
+		td {
+			padding: 6px;
+			width: calc(100% / 6);
+		}
+
+		button {
+			font-size: 16px;
+		}
+	}
+
+	@media (width <= 480px) {
+		td {
+			padding: 4px;
+			width: calc(100% / 3);
+		}
+
+		button {
+			font-size: 14px;
+		}
 	}
 }

@@ -1,11 +1,21 @@
 .dozen {
 	width: 100%;
+	font-size: 18px;
 	color: #14224a;
 	background-color: #fffac7;
 	border-collapse: collapse;
 
 	td {
-		padding: 10px;
+		width: 33%;
+		padding: 8px;
+
+		&:nth-child(2) {
+			width: 15%;
+		}
+
+		&:nth-child(3) {
+			width: 15%;
+		}
 	}
 
 	.first,

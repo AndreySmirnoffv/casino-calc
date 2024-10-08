@@ -9,4 +9,10 @@
 		display: flex;
 		gap: 4px;
 	}
+
+	@media (width <= 540px) {
+		&__line {
+			flex-direction: column;
+		}
+	}
 }
