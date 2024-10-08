@@ -12,13 +12,14 @@ export const ChangeNumber = ({
 		<div className={styles.numbers}>
 			<div className={styles.numbers__selected}>
 				{selectedNumbers.map((selectedNumber, id) => (
+					// eslint-disable-next-line sonarjs/no-array-index-key
 					<p key={id} className={`${styles.number} ${selectedNumber.color}`}>
 						{selectedNumber.number}
 					</p>
 				))}
 			</div>
 			<RouletteTable setSelectedNumbers={setSelectedNumbers} />
-			<div>
+			<div className={styles.numbers__buttons}>
 				<Button onClick={() => setSelectedNumbers([])}>Сброс</Button>
 				<Button
 					onClick={() =>

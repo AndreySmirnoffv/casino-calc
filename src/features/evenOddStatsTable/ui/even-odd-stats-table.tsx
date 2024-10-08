@@ -31,7 +31,7 @@ export const EvenOddStatsTable = ({
 		<table className={styles.stat}>
 			<tbody>
 				{stats.map(stat => (
-					<tr key={stat.label}>
+					<tr key={stat.label} className={styles[stat.color]}>
 						<td>{stat.label} -</td>
 						<td>{stat.value}</td>
 						<td>{stat.percentage}</td>

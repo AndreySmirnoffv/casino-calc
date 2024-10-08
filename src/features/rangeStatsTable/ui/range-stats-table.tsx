@@ -16,6 +16,7 @@ export const RangeStatsTable = ({
 				totalCount > 0
 					? ((countRange1 / totalCount) * 100).toFixed() + "%"
 					: "0%",
+			color: "redr",
 		},
 		{
 			label: "19-36",
@@ -24,6 +25,7 @@ export const RangeStatsTable = ({
 				totalCount > 0
 					? ((countRange2 / totalCount) * 100).toFixed() + "%"
 					: "0%",
+			color: "blackr",
 		},
 	];
 
@@ -31,7 +33,7 @@ export const RangeStatsTable = ({
 		<table className={styles.stat}>
 			<tbody>
 				{stats.map(stat => (
-					<tr key={stat.label}>
+					<tr key={stat.label} className={styles[stat.color]}>
 						<td>{stat.label} -</td>
 						<td>{stat.value}</td>
 						<td>{stat.percentage}</td>

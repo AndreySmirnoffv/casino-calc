@@ -62,7 +62,7 @@ export const RouletteTable = ({ setSelectedNumbers }: IRouletteTable) => {
 							0
 						</button>
 					</td>
-					{numbers.slice(1, 12).map(num => (
+					{numbers.slice(1, 13).map(num => (
 						<td key={num.value} className={styles[num.color]}>
 							<button
 								type={"button"}
@@ -78,7 +78,7 @@ export const RouletteTable = ({ setSelectedNumbers }: IRouletteTable) => {
 					))}
 				</tr>
 				<tr>
-					{numbers.slice(13, 24).map(num => (
+					{numbers.slice(13, 25).map(num => (
 						<td key={num.value} className={styles[num.color]}>
 							<button
 								type={"button"}
@@ -94,7 +94,7 @@ export const RouletteTable = ({ setSelectedNumbers }: IRouletteTable) => {
 					))}
 				</tr>
 				<tr>
-					{numbers.slice(25, 36).map(num => (
+					{numbers.slice(25, 37).map(num => (
 						<td key={num.value} className={styles[num.color]}>
 							<button
 								type={"button"}

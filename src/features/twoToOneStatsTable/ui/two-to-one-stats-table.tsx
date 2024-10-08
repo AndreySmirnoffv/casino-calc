@@ -17,6 +17,7 @@ export const TwoToOneStatsTable = ({
 				totalCount > 0
 					? ((firstLine / totalCount) * 100).toFixed() + "%"
 					: "0%",
+			class: "first",
 		},
 		{
 			label: "2 to 1 (middle)",
@@ -25,6 +26,7 @@ export const TwoToOneStatsTable = ({
 				totalCount > 0
 					? ((secondLine / totalCount) * 100).toFixed() + "%"
 					: "0%",
+			class: "second",
 		},
 		{
 			label: "2 to 1 (bottom)",
@@ -33,6 +35,7 @@ export const TwoToOneStatsTable = ({
 				totalCount > 0
 					? ((thirdLine / totalCount) * 100).toFixed() + "%"
 					: "0%",
+			class: "third",
 		},
 	] as const;
 
@@ -40,7 +43,7 @@ export const TwoToOneStatsTable = ({
 		<table className={styles.dozen}>
 			<tbody>
 				{stats.map(stat => (
-					<tr key={stat.label}>
+					<tr key={stat.label} className={styles[stat.class]}>
 						<td>{stat.label}</td>
 						<td>{stat.value}</td>
 						<td>{stat.percentage}</td>

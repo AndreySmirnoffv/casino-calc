@@ -1,13 +1,16 @@
 .analiz {
 	width: 100%;
+	background-color: #fffac7;
+	color: #14224a;
+	font-size: 18px;
 	border-collapse: collapse;
 
 	td {
 		padding: 10px;
-		border: 1px solid #ddd;
+		border: 2px solid #004;
 	}
 
-	thead td {
-		font-weight: bold;
+	.top {
+		color: #F00;
 	}
 }

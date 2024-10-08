@@ -1,8 +1,10 @@
 import { IButton } from "@shared/ui/button/model/types.ts";
 
+import styles from "./button.module.scss";
+
 export const Button = ({ children, ...props }: IButton) => {
 	return (
-		<button type={"button"} {...props}>
+		<button className={styles.button} type={"button"} {...props}>
 			{children}
 		</button>
 	);

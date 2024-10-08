@@ -1,9 +1,38 @@
 .stat {
 	width: 100%;
+	color: #14224a;
+	background-color: #fffac7;
 	border-collapse: collapse;
 
 	td {
 		padding: 10px;
-		border: 1px solid #ddd;
+	}
+
+	.redr {
+		td {
+			border-top: 1px solid #004;
+
+			&:first-child {
+				border-left: 1px solid #004;
+			}
+
+			&:last-child {
+				border-right: 1px solid #004;
+			}
+		}
+	}
+
+	.blackr {
+		td {
+			border-bottom: 1px solid #004;
+
+			&:first-child {
+				border-left: 1px solid #004;
+			}
+
+			&:last-child {
+				border-right: 1px solid #004;
+			}
+		}
 	}
 }

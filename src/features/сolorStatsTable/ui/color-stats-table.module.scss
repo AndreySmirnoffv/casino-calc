@@ -1,18 +1,43 @@
 .redb {
 	width: 100%;
+	font-size: 18px;
+	color: #ffd626;
 	border-collapse: collapse;
 
 	td {
 		padding: 10px;
-		border: 1px solid #ddd;
+
 	}
 
 	.redr {
 		background-color: red;
+
+		td {
+			border-top: 1px solid #004;
+
+			&:first-child {
+        border-left: 1px solid #004;
+      }
+
+			&:last-child {
+        border-right: 1px solid #004;
+      }
+		}
 	}
 
 	.blackr {
 		background-color: black;
-		color: white;
+
+		td {
+			border-bottom: 1px solid #004;
+
+			&:first-child {
+				border-left: 1px solid #004;
+			}
+
+			&:last-child {
+				border-right: 1px solid #004;
+			}
+		}
 	}
 }

@@ -9,20 +9,18 @@ export const BetProbabilityTable = ({
 		{
 			label: "Red/Black",
 			bet: probabilities.red >= probabilities.black ? "Black" : "Red",
-			probability: `${
+			probability:
 				probabilities.red >= probabilities.black
 					? probabilities.red
-					: probabilities.black
-			}%`,
+					: probabilities.black,
 		},
 		{
 			label: "Even/Odd",
 			bet: probabilities.even >= probabilities.odd ? "Odd" : "Even",
-			probability: `${
+			probability:
 				probabilities.even >= probabilities.odd
 					? probabilities.even
-					: probabilities.odd
-			}%`,
+					: probabilities.odd,
 		},
 		{
 			label: "1-18/19-36",
@@ -30,11 +28,10 @@ export const BetProbabilityTable = ({
 				probabilities.range1to18 >= probabilities.range19to36
 					? "19-36"
 					: "1-18",
-			probability: `${
+			probability:
 				probabilities.range1to18 >= probabilities.range19to36
 					? probabilities.range1to18
-					: probabilities.range19to36
-			}%`,
+					: probabilities.range19to36,
 		},
 	] as const;
 
@@ -52,7 +49,9 @@ export const BetProbabilityTable = ({
 					<tr key={bet.label}>
 						<td>{bet.label}</td>
 						<td>{bet.bet}</td>
-						<td>{bet.probability}</td>
+						<td className={bet.probability >= 90 ? styles.top : ""}>
+							{bet.probability}%
+						</td>
 					</tr>
 				))}
 			</tbody>

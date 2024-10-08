@@ -1,11 +1,18 @@
 .analiz {
 	width: 100%;
+	background-color: #fffac7;
 	border-collapse: collapse;
+	margin: 16px 0;
+
+	tr {
+		font-size: 18px;
+		color: #004;
+	}
 
 	td {
 		text-align: center;
 		padding: 10px;
-		border: 1px solid #ddd;
+		border: 2px solid #004;
 	}
 
 	.green {
@@ -23,8 +30,16 @@
 		color: white;
 	}
 
-	a {
-		color: inherit;
-		text-decoration: none;
+	button {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 22px;
+		font-weight: 700;
+		color: #fe7;
+
+		&:hover {
+      background-color: #ffb;
+    }
 	}
 }
