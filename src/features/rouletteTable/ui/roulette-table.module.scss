@@ -3,16 +3,21 @@
 	background-color: #fffac7;
 	border-collapse: collapse;
 	margin: 16px 0;
+	display: table;
+	table-layout: fixed;
 
 	tr {
 		font-size: 18px;
 		color: #004;
+		display: table-row;
 	}
 
 	td {
 		text-align: center;
 		padding: 10px;
 		border: 2px solid #004;
+		height: 50px;
+		width: 50px;
 	}
 
 	button {
@@ -24,8 +29,8 @@
 		color: #fe7;
 
 		&:hover {
-      background-color: #ffb;
-    }
+			background-color: #ffb;
+		}
 	}
 
 	.green {
@@ -44,6 +49,7 @@
 		td {
 			padding: 6px;
 			width: calc(100% / 6);
+			height: 50px;
 		}
 
 		button {
@@ -53,8 +59,9 @@
 
 	@media (width <= 480px) {
 		td {
-			padding: 4px;
+			padding: 2px;
 			width: calc(100% / 3);
+			height: 30px;
 		}
 
 		button {
