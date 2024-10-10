@@ -33,13 +33,19 @@ export const useCalculateProbabilities = (
 	const adjustValue = (value: number) =>
 		Math.min(Math.round(value * 100) / 100, 97.75);
 
-	const resetProbabilities = () => {
-		probabilities.red = 51.75;
-		probabilities.black = 51.75;
-		probabilities.even = 51.75;
-		probabilities.odd = 51.75;
-		probabilities.range1to18 = 51.75;
-		probabilities.range19to36 = 51.75;
+	const resetProbabilitiesColor = () => {
+		probabilities.red = 40.75;
+		probabilities.black = 40.75;
+	};
+
+	const resetProbabilitiesEven = () => {
+		probabilities.even = 40.75;
+		probabilities.odd = 40.75;
+	};
+
+	const resetProbabilitiesRange = () => {
+		probabilities.range1to18 = 40.75;
+		probabilities.range19to36 = 40.75;
 	};
 
 	// eslint-disable-next-line sonarjs/cognitive-complexity
@@ -55,7 +61,7 @@ export const useCalculateProbabilities = (
 			if (lastColor === "red") {
 				probabilities.red += 6.543;
 			} else {
-				if (lastColor !== null) resetProbabilities();
+				if (lastColor !== null) resetProbabilitiesColor();
 				probabilities.red += 12.324;
 			}
 			lastColor = "red";
@@ -64,12 +70,14 @@ export const useCalculateProbabilities = (
 			if (lastColor === "black") {
 				probabilities.black += 6.543;
 			} else {
-				if (lastColor !== null) resetProbabilities();
+				if (lastColor !== null) resetProbabilitiesColor();
 				probabilities.black += 12.324;
 			}
 			lastColor = "black";
 		} else {
-			resetProbabilities();
+			resetProbabilitiesColor();
+			resetProbabilitiesEven();
+			resetProbabilitiesRange();
 		}
 
 		if (isEven) {
@@ -77,7 +85,7 @@ export const useCalculateProbabilities = (
 			if (lastParity === "even") {
 				probabilities.even += 6.543;
 			} else {
-				if (lastParity !== null) resetProbabilities();
+				if (lastParity !== null) resetProbabilitiesEven();
 				probabilities.even += 12.324;
 			}
 			lastParity = "even";
@@ -86,7 +94,7 @@ export const useCalculateProbabilities = (
 			if (lastParity === "odd") {
 				probabilities.odd += 6.543;
 			} else {
-				if (lastParity !== null) resetProbabilities();
+				if (lastParity !== null) resetProbabilitiesEven();
 				probabilities.odd += 12.324;
 			}
 			lastParity = "odd";
@@ -97,7 +105,7 @@ export const useCalculateProbabilities = (
 			if (lastRange === "range1to18") {
 				probabilities.range1to18 += 6.543;
 			} else {
-				if (lastRange !== null) resetProbabilities();
+				if (lastRange !== null) resetProbabilitiesRange();
 				probabilities.range1to18 += 12.324;
 			}
 			lastRange = "range1to18";
@@ -106,7 +114,7 @@ export const useCalculateProbabilities = (
 			if (lastRange === "range19to36") {
 				probabilities.range19to36 += 6.543;
 			} else {
-				if (lastRange !== null) resetProbabilities();
+				if (lastRange !== null) resetProbabilitiesRange();
 				probabilities.range19to36 += 12.324;
 			}
 			lastRange = "range19to36";
